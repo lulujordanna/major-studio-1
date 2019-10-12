@@ -11,7 +11,7 @@ With this in mind, I created a bubble chart looking at the 96 form of media repr
 
 
 
-## Final Outcome
+### Final Outcome
 
 While not initially successful to find New Media Art, exhibited in my ideation drawing, I was directed to The Met's [Time-Based Media Group.](https://www.metmuseum.org/about-the-met/conservation-and-scientific-research/time-based-media-working-group) Using this as my dataset, I worked with the CSV file to analyze the collection for my quantitative visualization. I added additional data (Acquisition Date, Artist Gender, Object Media and Nationality) to the CSV file. Below you can find an image file of the visualization and my code for the webpage and assets are located in this folder of my Github. 
 
