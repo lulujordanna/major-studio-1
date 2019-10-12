@@ -1,0 +1,208 @@
+/*SECTIONS*/
+
+body{
+    margin:0;
+    background-color: #f8f8f8
+}
+
+header {
+  color:white;
+  background-image: url("images/headerimage.jpg");
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  background-size: cover;
+  padding:50px;
+  height: 45vh; 
+}
+
+#overview {
+ background-color: #f8f8f8;
+ color:#222121; 
+ padding: 50px;
+ margin: 50px 0px;
+}
+
+#visualization {
+  background-color: #222121;
+  padding:10px 50px 100px 50px; 
+}
+
+#gala2019 {background-color: #f8f8f8; color:#222121; padding:10px 50px 10px 50px;}
+#gala2018 {background-color: #f8f8f8; color:#222121; padding:10px 50px 10px 50px;}
+#gala2017 {background-color: #f8f8f8; color:#222121; padding:10px 50px 10px 50px;}
+#gala2016 {background-color: #f8f8f8; color:#222121; padding:10px 50px 10px 50px;}
+#gala2015 {background-color: #f8f8f8; color:#222121; padding:10px 50px 10px 50px;}
+
+footer {
+  background-color: #222121;
+  color: white; 
+  padding: 50px;
+}
+
+
+/*IMAGES*/
+img{ 
+  width: 100%;
+  height: auto;
+}
+
+.image{
+    position: relative; 
+    width: 100%; 
+    height: auto;
+    font-size: 0; 
+}
+
+[class^='color']{
+    position: absolute; 
+    display: block; 
+    height: 100%;
+    width: 16.67%;
+    opacity: 0.80;
+}
+
+/*CAMP PALETTE*/
+.color1{top:0;left: 0;background-color: #fca4ac;}
+.color2{top:0;left: 16.67%;background-color: #b4acd4;}
+.color3{top:0;left: 33.34%;background-color: #92e4d3;}
+.color4{top:0;left: 50.01%;background-color: #809e62;}
+.color5{top:0;left: 66.68%;background-color: #d4afa9;}
+.color6{top:0;left: 83.36%;background-color: #423940;}
+
+/*HEAVENLY BODIES PALETTE*/
+.color7{top:0;left: 0;background-color: #decfa0;}
+.color8{top:0;left: 16.67%;background-color: #bc9c44;}
+.color9{top:0;left: 33.34%;background-color: #a45414;}
+.color10{top:0;left: 50.01%;background-color: #ab4751;}
+.color11{top:0;left: 66.68%;background-color: #3c508f;}
+.color12{top:0;left: 83.36%;background-color: #4e4d49;}
+
+/*COMME DES GARCON PALETTE*/
+.color13{top:0;left: 0;background-color: #e79f9b;}
+.color14{top:0;left: 16.67%;background-color: #781019;}
+.color15{top:0;left: 33.34%;background-color: #b02423;}
+.color16{top:0;left: 50.01%;background-color: #085b79;}
+.color17{top:0;left: 66.68%;background-color: #03192e;}
+.color18{top:0;left: 83.36%;background-color: #c2c0bd;}
+
+/*MANUS MACHINA PALETTE*/
+.color19{top:0;left: 0;background-color: #745424;}
+.color20{top:0;left: 16.67%;background-color: #ac9c4c;}
+.color21{top:0;left: 33.34%;background-color: #dcccb1;}
+.color22{top:0;left: 50.01%;background-color: #f2eee5;}
+.color23{top:0;left: 66.68%;background-color: #e6b08c;}
+.color24{top:0;left: 83.36%;background-color: #474c4e;}
+
+/*CHINA THROUGH THE LOOK GLASS PALETTE*/
+.color25{top:0;left: 0;background-color: #093c8e;}
+.color26{top:0;left: 16.67%;background-color: #1c3c49;}
+.color27{top:0;left: 33.34%;background-color: #cf3529;}
+.color28{top:0;left: 50.01%;background-color: #a40d0a;}
+.color29{top:0;left: 66.68%;background-color: #e9c029;}
+.color30{top:0;left: 83.36%;background-color: #d3b07a;}
+
+
+/*TYPOGRAPHY*/
+
+h1 {
+   font-family: 'Playfair Display', serif;
+   font-weight: 400; 
+   font-size: 65px;
+   margin-bottom: -15px;
+}
+
+h2 {
+   font-family: 'Playfair Display', serif;
+   font-weight: 400; 
+   font-size: 30px; 
+}
+
+p {    
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px; 
+  
+}
+.mainParagraph{
+    margin-top: 60px;   
+}
+
+.subtitle{    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px; 
+}
+
+.credits{    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px; 
+}
+
+.mainQuestion{
+   margin-top:0px;
+   margin-right: 20px;
+}
+
+/*LINKS*/
+
+a:hover {
+  color: #fca4ac;
+}
+
+nav a {
+    text-decoration: none; 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 12px;  
+    font-weight: 400; 
+    color:white; 
+    transition: font-size 2s linear 1s;
+    margin: 3px;
+}
+
+footer a {
+    text-decoration: none; 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 14px;  
+    color:white; 
+}
+
+/*FLEXBOXES*/
+
+.headerStyle {
+  display: flex;
+  justify-content: space-between; 
+  flex-direction: row; 
+  align-items: center; 
+}
+
+.overviewStyle{
+  display: flex;
+  justify-content: flex-start; 
+  flex-direction: row; 
+}
+
+.overviewStyle h1{
+    display:inline-block;
+    width: 45vw;
+    flex-shrink: 0;
+}
+
+.sourceImages {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between; 
+  flex-direction: row; 
+  margin-top: 30px; 
+}
+
+.sourceImages img {
+    height: 100%;
+    width: 16.67%
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 400px) {
+
+}
