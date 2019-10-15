@@ -6,8 +6,8 @@ var svg = d3.select("section#visualization")
             .classed("svg-content", true);
 
 
-let width = 270;
-let margin = 18;
+let width = 240;
+let margin = 50;
 let y = 100;           
 
 var dataObject = [ 
@@ -32,14 +32,44 @@ dataObject.forEach( (item,index) => {
     
     let x = (width+margin)*index;
 
-    let rect = 45;
+    let rect = 40;
+    let imageId = item.imageId;
+
+    // title of colors
+    
     item.colors.forEach( (color,index) => {
-    svg.append('rect')
-       .attr('x', x + rect * index)
-       .attr('fill', color)
-       .attr('y', y)
-       .attr('width', rect)
-       .attr('height', 100);
+
+    
+    const a = svg.append('a');
+       a.append('rect') 
+      .attr('x', x + rect * index)
+      .attr('fill', color) 
+      .attr('y', y)
+      .attr('width', rect)
+      .attr('height', 100)
+      .on('click', ()=>{
+      
+      let element = document.getElementById(imageId);
+        console.log(element);
+        
+          window.scroll({
+            top: element.offsetTop,
+            left: 0,
+            behavior: 'smooth'
+          });
+      }); 
+      
+            
+      if(index==0){
+        svg.append('text')
+        .text( () => imageId.replace(/gala/g,'') )
+        .attr('fill', 'white')
+        .attr('x', x)
+        .attr('y', y-10)
+        .attr('font-size', '16pt')
+        .attr('font-family', 'Playfair Display');
+      }
+      
       }
     );
   });
