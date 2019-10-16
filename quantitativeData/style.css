@@ -91,7 +91,7 @@ footer a {
 .headerStyle {
   display: flex;
   justify-content: space-between; 
-  flex-direction: row-reverse; 
+  flex-direction: row; 
   align-items: center; 
 }
 
