@@ -13,6 +13,6 @@ With this in mind, I created a bubble chart looking at the 96 form of media repr
 
 ### Final Outcome
 
-While not initially successful to find New Media Art, exhibited in my ideation drawing, I was directed to The Met's [Time-Based Media Group.](https://www.metmuseum.org/about-the-met/conservation-and-scientific-research/time-based-media-working-group) Using this as my dataset, I worked with the CSV file to analyze the collection for my quantitative visualization. I added additional data (Acquisition Date, Artist Gender, Object Media and Nationality) to the CSV file. Below you can find an image file of the visualization and my code for the webpage and assets are located in this folder of my Github. 
+While not initially successful to find New Media Art, exhibited in my ideation drawing, I was directed to The Met's [Time-Based Media Group.](https://www.metmuseum.org/about-the-met/conservation-and-scientific-research/time-based-media-working-group) Using this as my dataset, I worked with the CSV file to analyze the collection for my quantitative visualization. I added additional data (Acquisition Date, Artist Gender, Object Media and Nationality) to the CSV file. Below you can find an image file of the visualization and my code for the webpage and assets are located in this folder of my Github. You can see the full webpage [here](https://lulujordanna.github.io/major-studio-1/quantitativeData/).
 
 ![Image of Final Output](https://github.com/lulujordanna/major-studio-1/blob/master/quantitativeData/images/New%20Media%20at%20the%20Met.png)
