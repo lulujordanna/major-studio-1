@@ -1,0 +1,157 @@
+/*SECTIONS*/
+body{
+    margin: 0;
+}
+header {
+  color:white;
+  background-image: url("images/image.png");
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  background-size: cover;
+  padding:50px;
+  height: 100vh; 
+}
+
+#section-header {
+  color:white;
+  background-image: url("images/image.png");
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  background-size: cover;
+  padding:50px;
+  height: 20vh; 
+}
+
+#overview {
+ background-color: white;
+ color:#222121; 
+ padding: 50px;
+ margin: 50px 200px;
+}
+
+#visualization-1 {
+  margin: 50px 200px;
+}
+
+#visualization-2 {
+  margin: 50px 200px;
+}
+
+.keyPoint{
+ background-color: white;
+ color:#222121; 
+ /*padding: 50px;*/
+ margin: 50px 200px;  
+}
+
+footer{
+ background-color: black; 
+ padding: 50px;
+ color:white;
+}
+
+/*TYPOGRAPHY*/
+
+h1 {
+   font-family: 'Open Sans', sans-serif; 
+   font-weight: 700; 
+   font-size: 190px; 
+   line-height: 190px; 
+   opacity: 0.9;
+}
+
+h2 {
+   font-family: 'Open Sans', sans-serif; 
+   font-weight: 700; 
+   font-size: 45px; 
+   margin-bottom: -30px; 
+}
+
+p{    
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 400;
+   font-size: 20px; 
+}
+
+.footerText{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px; 
+}
+
+.footerTitle{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px; 
+}
+
+.insight{
+ font-family: 'Open Sans', sans-serif; 
+ font-size: 30px;  
+ font-weight: 700; 
+}
+
+/*LINKS*/
+
+a{
+    color: #b43175;
+    text-decoration: none;
+}
+
+a:hover {
+  color: #f3dc50;
+}
+
+footer a {
+    text-decoration: none; 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 14px;  
+    color:#b43175; 
+}
+
+/*FLEXBOXES*/
+
+.headerStyle {
+  display: flex;
+  justify-content: space-between; 
+  flex-direction: row-reverse; 
+  align-items: flex-start; 
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 400px) {
+
+}
+
+/*BAR CHART*/
+  svg {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px; 
+    shape-rendering: crispEdges;
+  }
+
+ path.domain {
+    stroke: none;
+  }
+ 
+  .tick line {
+    stroke: #e6e6e6;
+  }
+  
+ /*IMAGE GALLERY*/
+  .grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 15px;
+  align-items: center;
+  }
+  
+.grid img {
+  max-width: 100%;
+  filter: grayscale(100%);
+}
+
+.grid img:hover {
+filter: grayscale(0%);
+}
