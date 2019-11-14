@@ -14,7 +14,6 @@ function drawBars(input, canvas) {
     update(params);
 }
 
-
 function initialize(params) {
 
     // unpacking params
@@ -58,7 +57,7 @@ function initialize(params) {
             .attr('y', function(d) {return y(0);})
             .attr('width', x.bandwidth())
             .attr('height', 0)
-            .attr('fill', function(d){ return color(d.cluster);});
+            .attr('fill', function(d){ return color(d.cluster);}); 
 
     // heights is a dictionary to store bar height by cluster
     // this hierarchy is important for animation purposes
@@ -219,6 +218,17 @@ function update(params){
             chosen.cluster = chosen.cluster === d.cluster ? null : d.cluster;
             update(params);
         })
+        
+        // .on("mouseover", function() { tooltip.style("display", null); })
+        // .on("mouseout", function() { tooltip.style("display", "none"); })
+        // .on("mousemove", function(d) {
+        //     var xPosition = d3.mouse(this)[0] - 15;
+        //     var yPosition = d3.mouse(this)[1] - 25;
+        //     tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
+        //     tooltip.select("text").text(d.y);
+            
+        // }
+        
         .transition()
         .duration(transDuration)
         .attr('y', function(d) { 
@@ -231,7 +241,6 @@ function update(params){
                 height - y(d.height),
                 height - y(d.height),
                 0);});
-
 }
 
 // heights is a dictionary to store bar height by cluster
@@ -328,12 +337,30 @@ function setUpSvgCanvas(input) {
         .attr('height', height + margin.top +margin.bottom )
         .append('g')
         .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+        
+    var tooltip = svg.append("g")
+      .attr("class", "tooltip")
+      .style("display", "none");
+        
+        tooltip.append("rect")
+          .attr("width", 30)
+          .attr("height", 20)
+          .attr("fill", "white")
+          .style("opacity", 0.5);
+        
+        tooltip.append("text")
+          .attr("x", 15)
+          .attr("dy", "1.2em")
+          .style("text-anchor", "middle")
+          .attr("font-size", "12px")
+          .attr("font-weight", "bold");
 
     return {
         svg: svg,
         margin: margin,
         width: width,
-        height: height
+        height: height,
+        tooltip: tooltip
     };
 }
 
@@ -370,5 +397,4 @@ function formatData(data){
         binNames: binNames,
         clusterNames: clusterNames
     };
-
 }
