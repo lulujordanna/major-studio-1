@@ -1,5 +1,4 @@
 let mainGrid = d3.select('main.grid');
-// var fs = require('fs');
 
 let photos = [
    {"id":11790,
@@ -755,9 +754,6 @@ let photos = [
     }
     ];
 
-// var photos = fs.readFileSync('/major-studio-1/interactive/files/photos.JSON');
-// photos = JSON.parse(photos); 
-    
 photos.forEach((photo) => {
     let existingHTML = mainGrid.html();
     let html = `<a href="https://www.metmuseum.org/art/collection/search/${photo.id}" target="_blank"><img src="images/${photo.photo}.jpg" alt="${photo.alt}"></a>`

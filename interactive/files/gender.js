@@ -4,8 +4,6 @@ var dataFile = 'files/gender.csv';
     d3.csv(dataFile, function(error, data){
     var input = {'data': data, 'width': 1000, 'height': 400};
     var canvas = setUpSvgCanvasNew(input);
-
-    console.log(data); 
     drawBars(input, canvas); 
     });
 

@@ -219,15 +219,16 @@ function update(params){
             update(params);
         })
         
-        // .on("mouseover", function() { tooltip.style("display", null); })
-        // .on("mouseout", function() { tooltip.style("display", "none"); })
-        // .on("mousemove", function(d) {
-        //     var xPosition = d3.mouse(this)[0] - 15;
-        //     var yPosition = d3.mouse(this)[1] - 25;
-        //     tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
-        //     tooltip.select("text").text(d.y);
-            
-        // }
+        .on("mouseenter", function(d) { 
+            // console.log(d);
+            tooltip.style("display", null); 
+            var xPosition = d3.mouse(this)[0] - 15;
+            var yPosition = d3.mouse(this)[1] - 25;
+            tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
+            tooltip.select("text").text(d.y);
+        })
+        .on("mouseout", function() { tooltip.style("display", "none"); })
+
         
         .transition()
         .duration(transDuration)
@@ -235,12 +236,16 @@ function update(params){
             return choice(chosen.cluster, d.cluster,
                 y(d.y1),
                 y(d.height),
-                myHeight(chosen, d, clusterNames, binNames, y, heights));})
+                myHeight(chosen, d, clusterNames, binNames, y, heights));
+            
+        })
         .attr('height', function(d) { 
             return choice(chosen.cluster, d.cluster,
                 height - y(d.height),
                 height - y(d.height),
-                0);});
+                0);
+            
+        });
 }
 
 // heights is a dictionary to store bar height by cluster
@@ -324,6 +329,7 @@ function initializeAxis(svg, x, y, height, width){
         .call(d3.axisBottom(x));
 }
 
+var tooltip; 
 
 function setUpSvgCanvas(input) {
     // Set up the svg canvas
@@ -338,7 +344,7 @@ function setUpSvgCanvas(input) {
         .append('g')
         .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
         
-    var tooltip = svg.append("g")
+    tooltip = svg.append("g")
       .attr("class", "tooltip")
       .style("display", "none");
         
