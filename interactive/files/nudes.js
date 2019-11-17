@@ -4,7 +4,6 @@ d3.csv(dataFile, function(error, data){
     var input = {'data': data, 'width': 1000, 'height': 400},
         canvas = setUpSvgCanvas(input);
 
-    // console.log(in); 
     drawBars(input, canvas); 
 }); 
 
@@ -50,7 +49,7 @@ function initialize(params) {
     var bar = params.bar = svg.selectAll('.bar')
       .data(blockData)
       .enter().append('g')
-        .attr('class', 'bar');
+      .attr('class', 'bar')
 
     bar.append('rect')
             .attr('x', function(d) { return x(d.x);})
@@ -67,7 +66,6 @@ function initialize(params) {
 
     // defining max of each bin to convert later to percentage
     params.maxPerBin = setUpMax(clusterNames, blockData);
-
 
     // variable to store chosen cluster when bar is clicked
     var chosen = params.chosen = {
@@ -99,14 +97,13 @@ function initialize(params) {
         .style('text-anchor', 'end');
 
     // initialize checkbox options
-    d3.select("#myCheckbox").on("change",function(){update(params);});
-
+    d3.select("#myCheckbox").on("click",function(){
+        update(params);
+    });
     params.view = false;
-
 }
 
 function update(params){
-
     // retrieving params to avoid putting params.x everywhere
     var svg = params.canvas.svg,
         margin = params.canvas.margin,
@@ -127,11 +124,11 @@ function update(params){
 
     // re-scaling data if view is changed to percentage
     // and re-scaling back if normal view is selected
-    // var newView = d3.select("#myCheckbox").property("checked");
     
-    var newView = true; 
-
+    var newView = d3.select("#myCheckbox").property("checked");
+    
     if(newView){
+        console.log('checked')
         if(view != newView){
             blockData.forEach(function (d){
                 d.y0 /= maxPerBin[d.x];
@@ -142,6 +139,7 @@ function update(params){
         }
     }
     else{
+        console.log('unchecked')
         if(view != newView){
             blockData.forEach(function (d){
                 d.y0 *= maxPerBin[d.x];
@@ -211,25 +209,13 @@ function update(params){
             width + margin.right - 25,
             width + margin.right - 25 - this.getComputedTextLength()/2);});
 
-
     // update bars
     bar.selectAll('rect')
         .on('click', function(d){
             chosen.cluster = chosen.cluster === d.cluster ? null : d.cluster;
             update(params);
         })
-        
-        .on("mouseenter", function(d) { 
-            // console.log(d);
-            tooltip.style("display", null); 
-            var xPosition = d3.mouse(this)[0] - 15;
-            var yPosition = d3.mouse(this)[1] - 25;
-            tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
-            tooltip.select("text").text(d.y);
-        })
-        .on("mouseout", function() { tooltip.style("display", "none"); })
 
-        
         .transition()
         .duration(transDuration)
         .attr('y', function(d) { 
@@ -329,8 +315,6 @@ function initializeAxis(svg, x, y, height, width){
         .call(d3.axisBottom(x));
 }
 
-var tooltip; 
-
 function setUpSvgCanvas(input) {
     // Set up the svg canvas
     var margin = {top: 20, right: 80, bottom: 20, left: 80},
@@ -343,30 +327,12 @@ function setUpSvgCanvas(input) {
         .attr('height', height + margin.top +margin.bottom )
         .append('g')
         .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
-        
-    tooltip = svg.append("g")
-      .attr("class", "tooltip")
-      .style("display", "none");
-        
-        tooltip.append("rect")
-          .attr("width", 30)
-          .attr("height", 20)
-          .attr("fill", "white")
-          .style("opacity", 0.5);
-        
-        tooltip.append("text")
-          .attr("x", 15)
-          .attr("dy", "1.2em")
-          .style("text-anchor", "middle")
-          .attr("font-size", "12px")
-          .attr("font-weight", "bold");
 
     return {
         svg: svg,
         margin: margin,
         width: width,
         height: height,
-        tooltip: tooltip
     };
 }
 

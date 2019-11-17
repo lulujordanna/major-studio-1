@@ -99,7 +99,7 @@ function initialize(params) {
         .style('text-anchor', 'end');
 
     // initialize checkbox options
-    d3.select("#myCheckbox").on("change",function(){update(params);});
+    d3.select("#myCheckbox2").on("click",function(){update(params);});
 
     params.view = false;
 
@@ -127,8 +127,8 @@ function update(params){
 
     // re-scaling data if view is changed to percentage
     // and re-scaling back if normal view is selected
-    // var newView = d3.select("#myCheckbox").property("checked");
     
+    //var newView = d3.select("#myCheckbox").property("checked");
     var newView = true; 
 
     if(newView){
