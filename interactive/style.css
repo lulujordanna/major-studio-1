@@ -51,12 +51,6 @@ header {
   margin: 50px 200px;
 }
 
-.keyPoint{
- background-color: white;
- color:#222121; 
- margin: 50px 200px;  
-}
-
 footer{
  background-color: black; 
  padding: 50px;
@@ -83,6 +77,12 @@ p{
    font-family: 'Futura', sans-serif;
    font-weight: 400;
    font-size: 22px; 
+}
+
+.keyPoint{
+ background-color: white;
+ color:#222121; 
+ margin: 50px 200px;  
 }
 
 .footerText{
@@ -116,12 +116,6 @@ footer a {
     color:#f3dc50; 
 }
 
-/*RESPONSIVE*/
-
-@media (max-width: 400px) {
-
-}
-
 /*BAR CHART*/
   svg {
     font-family: 'Open Sans', sans-serif;
@@ -153,4 +147,43 @@ footer a {
 .grid img:hover {
 filter: grayscale(0%);
 }
+
+/*RESPONSIVE*/
+
+@media (max-width: 1024px) and (min-width: 480px) {
+    
+    header {
+      color:white;
+      background-image: url("images/image.png");
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      background-size: cover;
+      padding:50px;
+      height: 50vh; 
+    }
+    
+   h1 {
+       font-family: 'Futura', sans-serif;
+       font-weight: 700; 
+       font-size: 120px; 
+       line-height: 120px; 
+       opacity: 0.9;
+    }
+    
+   .keyPoint{
+     background-color: white;
+     color:#222121; 
+     margin: 50px 50px;  
+    }
+    
+    #overview {
+     background-color: white;
+     color:#222121; 
+     padding: 50px;
+     margin: 50px 50px;
+    }
+}
+
+
+
 
