@@ -182,6 +182,10 @@ filter: grayscale(0%);
      padding: 50px;
      margin: 50px 50px;
     }
+    
+    #overview img {
+     height: 12vh; 
+    }
 }
 
 
