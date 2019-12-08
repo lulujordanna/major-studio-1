@@ -14,4 +14,9 @@ Building off my interactive project [Undress for The Met](https://lulujordanna.g
 
 ![Mobile Mockups](https://github.com/lulujordanna/major-studio-1/blob/master/newContext/images/mobileMockups.jpg)
 
+### Final Outcome
+Based on my feedback from my classmates and professors, I moved forward with working in the mobile space. I built a mockup of a AR app which would use the camera to identify nudes on display at The Met. Once the artwork is identified, the Guerrilla Girls mask would appear with the most striking stat. More information including artwork description and graphs would be included below. The goal is to guide the user through the museum in a way that breaks down the subject representation of women.
+
+![Mobile Mockups](https://github.com/lulujordanna/major-studio-1/blob/master/newContext/images/Met-App-Final.jpg)
+
 
