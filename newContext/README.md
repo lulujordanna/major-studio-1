@@ -17,6 +17,8 @@ Building off my interactive project [Undress for The Met](https://lulujordanna.g
 ### Final Outcome
 Based on my feedback from my classmates and professors, I moved forward with working in the mobile space. I built a mockup of a AR app which would use the camera to identify nudes on display at The Met. Once the artwork is identified, the Guerrilla Girls mask would appear with the most striking stat. More information including artwork description and graphs would be included below. The goal is to guide the user through the museum in a way that breaks down the subject representation of women.
 
+This prototype was made in XD. Special thanks to The Metropolitan Museum of Art’s Digital Collection Open Access and Clare Churchouse for providing the data sources. The data was analyzed in Excel, using the keyword tags to identify the nude artworks and object number to classify acquisition dates. I added additional data (artist gender, type of nude and reclassifcation of media) to the [CSV file](https://github.com/lulujordanna/major-studio-1/blob/master/newContext/files/Women_Met.xlsx) for my anaylsis. The total sample size of the nude artworks in The Met’s collection is 2282. 2011 objects were used for the comparative analysis and 5035 objects were analyzed for the Modern Art acquisitions. The background photo © Guerrilla Girls.
+
 ![Mobile Mockups](https://github.com/lulujordanna/major-studio-1/blob/master/newContext/images/Met-App-Final.jpg)
 
 
